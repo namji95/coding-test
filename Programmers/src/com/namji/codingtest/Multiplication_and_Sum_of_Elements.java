@@ -9,7 +9,7 @@ public class Multiplication_and_Sum_of_Elements {
 		 * 곱한 값이 더한 값의 제곱보다 크면 0을 출력하는 문제입니다.
 		 * 3, 4, 5, 2, 1 / 5, 7, 8, 3
 		 */
-		int[] num_list = { 5, 7, 8, 3};
+		int[] num_list = {3, 4, 5, 2, 1};
 		int answer = 0;
 		int multi = 1;
 		int sum = 0;
