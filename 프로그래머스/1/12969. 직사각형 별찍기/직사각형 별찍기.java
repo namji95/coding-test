@@ -5,11 +5,18 @@ class Solution {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-        for (int i = 1; i <= b; i++) {
-            for (int j = 1; j <= a; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1; i <= a; i++) {
+            sb.append("*");
         }
+        for (int i = 1; i <= b; i++) {
+            System.out.println(sb.toString());
+        }
+//        for (int i = 1; i <= b; i++) {
+//            for (int j = 1; j <= a; j++) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
     }
 }
