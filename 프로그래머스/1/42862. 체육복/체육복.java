@@ -11,7 +11,6 @@ class Solution {
                     answer++;
                     lost[i] = -1;
                     reserve[j] = -1;
-                    break;
                 }
             }
         }
@@ -22,7 +21,6 @@ class Solution {
                     answer++;
                     lost[i] = -1;
                     reserve[j] = -1;
-                    break;
                 }
             }
         }
