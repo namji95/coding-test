@@ -1,25 +1,25 @@
-// import java.util.*;
+import java.util.*;
 
-// class Solution {
-//     public int solution(int[] d, int budget) {
-//         int sum = 0;
-//         int answer = 0;
-//         Arrays.sort(d);
+class Solution {
+    public int solution(int[] d, int budget) {
+        int sum = 0;
+        int answer = 0;
+        Arrays.sort(d);
         
-//         for (int i = 0; i < d.length; i++) {
-//             if (sum <= budget) {
-//                 sum += d[i];
-//                 answer++;
-//             }
-//             if (sum > budget) {
-//                 sum -= d[i];
-//                 answer--;
-//             }
-//         }
+        for (int i = 0; i < d.length; i++) {
+            if (sum <= budget) {
+                sum += d[i];
+                answer++;
+            }
+            if (sum > budget) {
+                sum -= d[i];
+                answer--;
+            }
+        }
         
-//         return answer;
-//     }
-// }
+        return answer;
+    }
+}
 
 // import java.util.*;
 
@@ -40,15 +40,15 @@
 //     }
 // }
 
-import java.util.*;
+// import java.util.*;
 
-class Solution {
-    public int solution(int[] d, int budget) {
-        int answer = 0;
-        Arrays.sort(d);
+// class Solution {
+//     public int solution(int[] d, int budget) {
+//         int answer = 0;
+//         Arrays.sort(d);
         
-        while((budget -= d[answer]) >= 0 && ++answer < d.length);
+//         while((budget -= d[answer]) >= 0 && ++answer < d.length);
         
-        return answer;
-    }
-}
+//         return answer;
+//     }
+// }
