@@ -14,14 +14,32 @@
 //     }
 // }
 
+// class Solution {
+//     public int solution(int i, int j, int k) {
+//         StringBuilder str = new StringBuilder();
+        
+//         for (int n = i; n <= j; n++) {
+//             str.append(n);
+//         }
+        
+//         return str.length() - str.toString().replace(k+"", "").length();
+//     }
+// }
+
 class Solution {
     public int solution(int i, int j, int k) {
-        StringBuilder str = new StringBuilder();
+        int answer = 0;
         
         for (int n = i; n <= j; n++) {
-            str.append(n);
+            int temp = n;
+            while (temp != 0) {
+                if (temp % 10 == k) {
+                    answer++;
+                }
+                temp /= 10;
+            }
         }
         
-        return str.length() - str.toString().replace(k+"", "").length();
+        return answer;
     }
 }
