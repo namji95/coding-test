@@ -34,6 +34,19 @@
 //     }
 // }
 
+// import java.util.*;
+// import java.time.*;
+
+// class Solution {
+//     public int solution(int[] date1, int[] date2) {
+//         int answer = 0;
+
+//         answer = Arrays.compare(date1, date2) < 0 ? 1 : 0;
+        
+//         return answer;
+//     }
+// }
+
 import java.util.*;
 import java.time.*;
 
@@ -41,7 +54,14 @@ class Solution {
     public int solution(int[] date1, int[] date2) {
         int answer = 0;
 
-        answer = Arrays.compare(date1, date2) < 0 ? 1 : 0;
+        for (int i = 0; i < date1.length; i++) {
+            if (date2[i] > date1[i]) {
+                answer = 1;
+                break;
+            } else if (date2[i] < date1[i]) {
+                break;
+            }
+        }
         
         return answer;
     }
