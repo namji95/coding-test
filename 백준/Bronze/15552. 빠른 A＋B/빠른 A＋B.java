@@ -3,23 +3,41 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-            solution1();
+//        solution1();
+        solution2();
     }
 
-    public static void solution1() throws IOException {
+//    // bufferedWriter
+//    public static void solution1() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+//        StringTokenizer st;
+//        int T = Integer.parseInt(br.readLine());
+//
+//        for (int i = 0; i < T; i++) {
+//            st = new StringTokenizer(br.readLine());
+//            int A = Integer.parseInt(st.nextToken());
+//            int B = Integer.parseInt(st.nextToken());
+//            bw.write((A + B) + "\n");
+//        }
+//
+//        bw.flush();
+//        bw.close();
+//    }
+
+    // StringBuilder
+    public static void solution2() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int N = Integer.parseInt(br.readLine());
         StringTokenizer st;
-        int T = Integer.parseInt(br.readLine());
+        StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < T; i++) {
-            st = new StringTokenizer(br.readLine());
-            int A = Integer.parseInt(st.nextToken());
-            int B = Integer.parseInt(st.nextToken());
-            bw.write((A + B) + "\n");
+        for (int i = 0; i < N; i++) {
+            st = new StringTokenizer(br.readLine(), " ");
+            sb.append(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken())).append("\n");
         }
+        br.close();
 
-        bw.flush();
-        bw.close();
+        System.out.println(sb);
     }
 }
