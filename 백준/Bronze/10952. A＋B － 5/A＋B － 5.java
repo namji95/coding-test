@@ -12,12 +12,10 @@ public class Main {
         while (true) {
             int A = in.nextInt();
             int B = in.nextInt();
-            if (A + B != 0) {
-                System.out.println(A + B);
-                continue;
-            } else {
+            if (A == 0 && B == 0) {
                 break;
             }
+            System.out.println(A + B);
         }
     }
 }
