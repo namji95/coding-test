@@ -1,29 +1,26 @@
 import java.util.*;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        solution1();
+    public static void main(String[] args) throws IOException {
+        solution3();
     }
 
-    public static void solution1() {
-        Scanner in = new Scanner(System.in);
-        int N = in.nextInt();
-        int X = in.nextInt();
-        int[] arr = new int[N];
-        StringBuilder answer = new StringBuilder();
+    public static void solution3() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int N = Integer.parseInt(st.nextToken());
+        int X = Integer.parseInt(st.nextToken());
+        StringBuilder sb = new StringBuilder();
+
+        st = new StringTokenizer(br.readLine(), " ");
 
         for (int i = 0; i < N; i++) {
-            arr[i] = in.nextInt();
-        }
+            int value = Integer.parseInt(st.nextToken());
 
-        in.close();
-
-        for (int j : arr) {
-            if (j < X) {
-                answer.append(j).append(" ");
-            }
+            if (value < X)
+                sb.append(value).append(' ');
         }
-        
-        System.out.println(answer);
+        System.out.println(sb);
     }
 }
