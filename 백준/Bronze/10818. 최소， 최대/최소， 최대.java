@@ -1,32 +1,24 @@
 import java.util.*;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        solution1();
+    public static void main(String[] args) throws IOException {
+        solution3();
     }
-
-    public static void solution1() {
-        Scanner in = new Scanner(System.in);
-        int N = in.nextInt();
+    
+    public static void solution3() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine()," ");
+        int index = 0;
         int[] arr = new int[N];
-        int max = 0;
-        int min = 0;
 
-        for (int i = 0; i < N; i++) {
-            arr[i] = in.nextInt();
+        while (st.hasMoreTokens()) {
+            arr[index] = Integer.parseInt(st.nextToken());
+            index++;
         }
 
-        min = arr[0];
-        max = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (min > arr[i]) {
-                min = arr[i];
-            }
-            if (max < arr[i]) {
-                max = arr[i];
-            }
-        }
-
-        System.out.println(min + " " + max);
+        Arrays.sort(arr);
+        System.out.println(arr[0] + " " + arr[arr.length - 1]);
     }
 }
