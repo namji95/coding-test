@@ -3,17 +3,24 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        solution3();
+        solution4();
     }
 
-    public static void solution3() throws IOException {
+    public static void solution4() throws IOException {
+        boolean[] arr = new boolean[42];
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Set<Integer> set = new HashSet<>();
 
         for (int i = 0; i < 10; i++) {
-            set.add(Integer.parseInt(br.readLine()) % 42);
+            arr[Integer.parseInt(br.readLine()) % 42] = true;
         }
 
-        System.out.println(set.size());
+        int count = 0;
+        for (boolean bool : arr) {
+            if (bool) {
+                count++;
+            }
+        }
+
+        System.out.println(count);
     }
 }
