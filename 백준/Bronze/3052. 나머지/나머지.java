@@ -1,18 +1,19 @@
 import java.util.*;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        solution2();
+    public static void main(String[] args) throws IOException {
+        solution3();
     }
-    
-    public static void solution2() {
-        Scanner in = new Scanner(System.in);
+
+    public static void solution3() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Set<Integer> set = new HashSet<>();
-        
+
         for (int i = 0; i < 10; i++) {
-            set.add(in.nextInt() % 42);
+            set.add(Integer.parseInt(br.readLine()) % 42);
         }
-        
+
         System.out.println(set.size());
     }
 }
