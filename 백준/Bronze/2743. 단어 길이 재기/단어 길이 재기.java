@@ -1,13 +1,14 @@
 import java.util.*;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        solution1();
+    public static void main(String[] args) throws IOException {
+        solution2();
     }
 
-    public static void solution1() {
-        Scanner in = new Scanner(System.in);
-        String s = in.nextLine();
+    public static void solution2() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String s = br.readLine();
 
         System.out.println(s.length());
     }
