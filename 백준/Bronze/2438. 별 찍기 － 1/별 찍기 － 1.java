@@ -1,19 +1,23 @@
 import java.util.*;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        solution1();
+    public static void main(String[] args) throws IOException {
+        solution3();
     }
-
-    public static void solution1() {
-        Scanner in = new Scanner(System.in);
-        int N = in.nextInt();
+    
+    public static void solution3() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        br.close();
+        StringBuilder sb = new StringBuilder();
 
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= i; j++) {
-                System.out.print("*");
+                sb.append("*");
             }
-            System.out.println();
+            sb.append("\n");
         }
+        System.out.println(sb);
     }
 }
