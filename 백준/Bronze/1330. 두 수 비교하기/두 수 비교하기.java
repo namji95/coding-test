@@ -10,7 +10,8 @@ public class Main {
 //        solution1(A, B);
 //        solution2(A, B);
 //        solution3(A, B);
-        solution4();
+//        solution4();
+        solution5();
     }
 
 //    public static void solution1(int A, int B) {
@@ -31,13 +32,22 @@ public class Main {
 //    public static void solution3(int A, int B) {
 //        System.out.println(A > B ? ">" : ((A < B) ? "<" : "=="));
 //    }
+//
+//    public static void solution4() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        String str = br.readLine();
+//        StringTokenizer st = new StringTokenizer(str, " ");
+//        int A = Integer.parseInt(st.nextToken());
+//        int B = Integer.parseInt(st.nextToken());
+//
+//        System.out.println(A > B ? ">" : ((A < B) ? "<" : "=="));
+//    }
 
-    public static void solution4() throws IOException {
+    public static void solution5() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String str = br.readLine();
-        StringTokenizer st = new StringTokenizer(str, " ");
-        int A = Integer.parseInt(st.nextToken());
-        int B = Integer.parseInt(st.nextToken());
+        String[] str = br.readLine().split(" ");
+        int A = Integer.parseInt(str[0]);
+        int B = Integer.parseInt(str[1]);
 
         System.out.println(A > B ? ">" : ((A < B) ? "<" : "=="));
     }
