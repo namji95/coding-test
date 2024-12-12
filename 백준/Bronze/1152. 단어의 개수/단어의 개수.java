@@ -5,19 +5,11 @@ public class Main {
         Scanner in = new Scanner(System.in);
         String s = in.nextLine();
 
-        solution1(s);
+        solution2(s);
     }
 
-    public static void solution1(String s) {
-        String trim_str = s.trim();
-        String[] split_str = trim_str.split(" ");
-        int cnt = 0;
-
-        for (String str : split_str) {
-            if (!str.isEmpty()) {
-                cnt++;
-            }
-        }
-        System.out.println(cnt);
+    public static void solution2(String s) {
+        StringTokenizer st = new StringTokenizer(s, " ");
+        System.out.println(st.countTokens());
     }
 }
